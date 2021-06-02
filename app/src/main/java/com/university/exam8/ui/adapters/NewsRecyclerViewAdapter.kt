@@ -73,7 +73,7 @@ class NewsRecyclerViewAdapter(
     inner class WallPostsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private lateinit var model: NewsModel
         fun onBind() {
-            model = NewsModel()
+            model = news[adapterPosition]
             Glide.with(App.instance.getContext()).load(model.cover).into(itemView.newsCoverImageView)
             itemView.titleTextView.text = model.titleKA
         }

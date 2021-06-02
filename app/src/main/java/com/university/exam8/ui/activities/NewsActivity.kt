@@ -62,7 +62,7 @@ class NewsActivity : AppCompatActivity() {
         if (lastNewsId.isNotEmpty())
             parameters["lastId"] = lastNewsId
         DataLoader.getRequest(
-            null,
+            progressBar,
             ApiMethod.news,
             parameters,
             object : FutureCallBack<String> {
